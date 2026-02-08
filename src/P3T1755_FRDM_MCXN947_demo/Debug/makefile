@@ -66,7 +66,7 @@ main-build: P3T1755_FRDM_MCXN947_demo.axf
 P3T1755_FRDM_MCXN947_demo.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU C++ Linker'
-	arm-none-eabi-c++ -nostdlib -L"/Users/tedd/dev/mcuxpresso/r01projects/_r01lib_frdm_mcxn947/Debug" -Xlinker -Map="P3T1755_FRDM_MCXN947_demo.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T P3T1755_FRDM_MCXN947_demo_Debug.ld -u _printf_float -u _scanf_float -o "P3T1755_FRDM_MCXN947_demo.axf" $(OBJS) $(USER_OBJS) $(LIBS) -l_r01lib_frdm_mcxn947
+	arm-none-eabi-c++ -nostdlib -L"C:\dev_work\git\my\mcxn947_dev\src\_r01lib_frdm_mcxn947\Debug" -Xlinker -Map="P3T1755_FRDM_MCXN947_demo.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T P3T1755_FRDM_MCXN947_demo_Debug.ld -u _printf_float -u _scanf_float -o "P3T1755_FRDM_MCXN947_demo.axf" $(OBJS) $(USER_OBJS) $(LIBS) -l_r01lib_frdm_mcxn947
 	@echo 'Finished building target: $@'
 	@echo ' '
 
